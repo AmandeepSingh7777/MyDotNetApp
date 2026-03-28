@@ -43,9 +43,9 @@ builder.Services.AddSingleton<IProductService, ProductService>();
 var app = builder.Build();
 
 // Middleware Pipeline Configuration ---------------------------------
-if (app.Environment.IsDevelopment())
+//if (app.Environment.IsDevelopment())  // this use for  development environment when i start project.
 /// the IsDevelopment method is used to check if the application is running in a development environment. If it returns true, the code inside the if block will be executed, which typically includes middleware and configurations that are specific to the development environment, such as enabling Swagger UI for API documentation.
-{
+//{  // open this comment when  if condition work '{'
      app.UseSwagger();
      /// the UseSwagger method is used to enable the Swagger middleware, which generates the Swagger JSON document for the API. This document describes the API endpoints, request/response models, and other relevant information about the API.
      app.UseSwaggerUI(c =>
@@ -70,7 +70,7 @@ if (app.Environment.IsDevelopment())
          /// base URL, you will see the Swagger UI instead of a default landing page.
      });
 
-}
+//} // open this comment when  if condition work  same here '}'
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
