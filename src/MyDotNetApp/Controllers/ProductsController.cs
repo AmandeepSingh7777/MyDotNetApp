@@ -29,7 +29,7 @@ namespace MyDotNetApp.Controllers;
 ///  controller will be "api/products",
 /// where [controller] is a placeholder that will be replaced with the 
 /// name of the controller ( without the "Controller" suffix).
-[Route("api/[controller]")]
+[Route("api/product")]
 
 /// Produces ("application/json") means that this controller will return responses in JSON format by default.
 /// This attribute indicates that the controller's actions will produce responses with the "application/json"
